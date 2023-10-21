@@ -15,7 +15,7 @@ public class Flight {
 
     private String location;
 
-    private int seats;
+    private  int seats;
 
 
     public Flight(String id, int time, String location, int seats) {
