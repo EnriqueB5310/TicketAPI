@@ -10,8 +10,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @SpringBootApplication
 @EnableMongoRepositories
 public class TicketApiApplication  {
-@Autowired
-	FlightRepo myFlightRepo;
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(TicketApiApplication.class, args);

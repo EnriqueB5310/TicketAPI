@@ -17,7 +17,7 @@ public class Flight {
 
     private  int seats;
 
-
+Flight() {};
     public Flight(String id, int time, String location, int seats) {
 
         super();
