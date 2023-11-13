@@ -9,11 +9,15 @@ public class Flight {
     @Id
     private int id;
 
+    private double price;
+
+    private String airline;
+
 
     private String from;
     private String to;
 
-    private int time;
+    private String time;
 
 
     public int getId() {return this.id; };
@@ -26,7 +30,7 @@ public class Flight {
         return to;
     }
 
-    public Flight(int id, String to, String from, int time) {
+    public Flight(int id, String to, String from, String time, int price, String airline) {
         super();
         this.id = id;
     }
