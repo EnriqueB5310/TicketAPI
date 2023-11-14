@@ -4,9 +4,11 @@ import com.CSCProject.TicketAPI.apiService.FlightService;
 import com.CSCProject.TicketAPI.flightmodel.Flight;
 import com.CSCProject.TicketAPI.repository.FlightRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class FlightImpl implements FlightService {
 
     @Autowired

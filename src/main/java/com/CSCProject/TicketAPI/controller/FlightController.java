@@ -4,9 +4,7 @@ package com.CSCProject.TicketAPI.controller;
 import com.CSCProject.TicketAPI.apiService.FlightService;
 import com.CSCProject.TicketAPI.flightmodel.Flight;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -14,13 +12,18 @@ import java.util.List;
 @RequestMapping("/api/flights")
 public class FlightController {
 
-    @Autowired(required = false)
+    @Autowired
     private FlightService flightService;
 
     @GetMapping("/all")
     public List<Flight> getFlights() {
      return flightService.getFlights();
     };
+
+    @PostMapping("/addFlight")
+    public Flight insert(@RequestBody Flight flight) {
+        return flightService.addFlight(flight);
+    }
 
 
 }
