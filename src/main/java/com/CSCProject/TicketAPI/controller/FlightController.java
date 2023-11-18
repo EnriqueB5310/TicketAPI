@@ -21,8 +21,8 @@ public class FlightController {
     };
 
     @PostMapping("/addFlight")
-    public Flight insert(@RequestBody Flight flight) {
-        return flightService.addFlight(flight);
+    public void insert(@RequestBody Flight flight) {
+        flightService.addFlight(flight);
     }
 
 

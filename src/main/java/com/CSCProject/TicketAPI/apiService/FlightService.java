@@ -10,7 +10,7 @@ import java.util.List;
 public interface FlightService {
     public List<Flight> getFlights();
 
-    public Flight addFlight(Flight flight);
+    public void addFlight(Flight flight);
 
     public Flight deleteFlight(Flight flight);
 
