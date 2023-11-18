@@ -26,4 +26,11 @@ public class FlightController {
     }
 
 
+    @GetMapping("/destination")
+    @ResponseBody
+    public List<Flight> getByDestination(@RequestParam String location) {
+        return flightService.findDestination(location);
+    }
+
+
 }

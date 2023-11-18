@@ -14,4 +14,6 @@ public interface FlightService {
 
     public Flight deleteFlight(Flight flight);
 
+    public List<Flight> findDestination(String location);
+
 }

@@ -40,4 +40,10 @@ public class FlightImpl implements FlightService {
 
         return null;
     }
+
+
+    @Override
+    public List<Flight> findDestination(String location) {
+        return flights.findByLocation(location);
+    }
 }
