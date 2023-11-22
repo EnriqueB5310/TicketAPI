@@ -26,7 +26,7 @@ public class FlightImpl implements FlightService {
      * @param flight
      * @return
      */
-    @Override
+    @Override //only for testing connection to db + the atlas UI is too messy to use that to add stuff
     public void addFlight(Flight flight) {
          flights.save(flight);
     }
@@ -37,7 +37,7 @@ public class FlightImpl implements FlightService {
      */
     @Override
     public Flight deleteFlight(Flight flight) {
-
+        //genuinely dont know why this was giving me errors but we arent using it anyway so whatever i guess
         return null;
     }
 
@@ -46,4 +46,14 @@ public class FlightImpl implements FlightService {
     public List<Flight> findDestination(String location) {
         return flights.findByLocation(location);
     }
+
+    /**
+     * @param flight
+     */
+    @Override
+    public void updateSeat(Flight flight) {
+
+    }
+
+
 }

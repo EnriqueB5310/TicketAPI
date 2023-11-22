@@ -20,6 +20,7 @@ public class Flight {
 
     private String airline;
 
+    private int seats;
 
     private String from;
     private String to;

@@ -12,6 +12,8 @@ public interface FlightRepo extends MongoRepository<Flight, String> {
     @Query("{to:'?0'}")
     List<Flight> findByLocation(String to);
 
+    @Query("{seats: '?0'}")
+    List<Flight> findBySeats();
 
 
 

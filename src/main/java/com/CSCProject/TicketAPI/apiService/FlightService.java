@@ -16,4 +16,6 @@ public interface FlightService {
 
     public List<Flight> findDestination(String location);
 
+    public void updateSeat(Flight flight);
+
 }
