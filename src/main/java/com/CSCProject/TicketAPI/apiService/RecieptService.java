@@ -9,5 +9,7 @@ public interface RecieptService {
 
     public FlightReceipt getReciept(int id);
 
+    public FlightReceipt createReciept(FlightReceipt receipt);
+
 
 }
