@@ -56,4 +56,10 @@ public class FlightImpl implements FlightService {
     }
 
 
+    @Override
+    public List<Flight> findTrip(String from, String to) {
+        return flights.findTrip(from,  to);
+    }
+
+
 }

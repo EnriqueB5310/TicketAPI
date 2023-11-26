@@ -18,4 +18,6 @@ public interface FlightService {
 
     public void updateSeat(Flight flight);
 
+    public List<Flight> findTrip(String from, String to);
+
 }

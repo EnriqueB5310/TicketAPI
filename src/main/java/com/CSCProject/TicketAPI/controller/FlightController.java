@@ -32,5 +32,11 @@ public class FlightController {
         return flightService.findDestination(location);
     }
 
+    @GetMapping("/trips")
+    @ResponseBody
+    public List<Flight> searchTrip(@RequestParam String from, @RequestParam String to) {
+        return flightService.findTrip(from, to);
+    }
+
 
 }
