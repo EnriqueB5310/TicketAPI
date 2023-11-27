@@ -6,6 +6,8 @@ import com.CSCProject.TicketAPI.flightmodel.Flight;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.List;
 
 @RestController
@@ -29,13 +31,17 @@ public class FlightController {
 
     @GetMapping("/destination")
     @ResponseBody
-    public List<Flight> getByDestination(@RequestParam String location) {
+    public List<Flight> getByDestination(@RequestParam String location) throws UnsupportedEncodingException {
+        URLEncoder.encode(location, "UTF-8");
         return flightService.findDestination(location);
     }
 
     @GetMapping("/trips")
     @ResponseBody
-    public List<Flight> searchTrip(@RequestParam String from, @RequestParam String to) {
+    public List<Flight> searchTrip(@RequestParam String from, @RequestParam String to) throws UnsupportedEncodingException {
+        URLEncoder.encode(from, "UTF-8");
+        URLEncoder.encode(to, "UTF-8");
+
         return flightService.findTrip(from, to);
     }
 
