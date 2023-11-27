@@ -22,9 +22,6 @@ public class Flight {
     private String to;
     private String time;
 
-    public Flight() {
-    }
-
     public int getId() {
         return id;
     }
