@@ -11,7 +11,7 @@ import java.net.URLEncoder;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = '*')
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/api/flights")
 public class FlightController {
 
