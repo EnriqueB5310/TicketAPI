@@ -22,7 +22,7 @@ public class RecieptController {
 
     //would pass the response body of the flight obj from the front end into the reciept body
     @PostMapping("/create")
-    public FlightReceipt createReciept(@RequestParam FlightReceipt receipt) {
+    public FlightReceipt createReciept(@RequestBody FlightReceipt receipt) {
         return recieptService.createReciept(receipt);
     }
 
