@@ -1,10 +1,11 @@
 package com.CSCProject.TicketAPI.controller;
 
-import com.CSCProject.TicketAPI.apiService.FlightService;
 import com.CSCProject.TicketAPI.apiService.RecieptService;
 import com.CSCProject.TicketAPI.recieptModel.FlightReceipt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/reciepts")
@@ -16,7 +17,7 @@ public class RecieptController {
 
     @GetMapping("/reciept")
     @ResponseBody
-    public FlightReceipt getReciept(@RequestParam int id) {
+    public Optional<FlightReceipt> getReciept(@RequestParam int id) {
         return recieptService.getReciept(id);
     }
 

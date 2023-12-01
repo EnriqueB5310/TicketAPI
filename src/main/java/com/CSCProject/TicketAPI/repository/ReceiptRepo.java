@@ -7,10 +7,9 @@ import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ReceiptRepo extends MongoRepository<FlightReceipt,String> {
+public interface ReceiptRepo extends MongoRepository<FlightReceipt, Integer> {
 
-    @Query("{id: '?0'}")
-    FlightReceipt findByID(int id);
+
 
 
 }
