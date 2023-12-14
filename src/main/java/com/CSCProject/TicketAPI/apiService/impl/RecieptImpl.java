@@ -26,6 +26,7 @@ public class RecieptImpl implements RecieptService {
     }
 
     /**
+     * @param receipt
      * @return
      */
     @Override

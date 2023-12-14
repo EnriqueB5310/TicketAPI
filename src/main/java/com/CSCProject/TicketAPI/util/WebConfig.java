@@ -1,4 +1,4 @@
-package com.CSCProject.TicketAPI;
+package com.CSCProject.TicketAPI.util;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
