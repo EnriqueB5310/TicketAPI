@@ -2,14 +2,9 @@ package com.CSCProject.TicketAPI.flightmodel;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Data
+
+
 @Document("Flights")
 public class Flight {
 
@@ -27,5 +22,15 @@ public class Flight {
 
     private String time;
 
+    public Flight(int id, double price,String airline, int seats, String from, String to, String time) {
+        this.id = id;
+        this.price = price;
+        this.airline = airline;
+        this.seats = seats;
+        this.from = from;
+        this.to = to;
+        this.time = time;
 
+    }
 }
+

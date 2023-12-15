@@ -7,4 +7,5 @@ import org.springframework.web.server.ResponseStatusException;
 @ResponseStatus(value = HttpStatus.NOT_FOUND, reason="Flight Not found")
 public class NotFoundException extends RuntimeException {
   // Used in event a the query the user sends doesnt exist
+    //Spring has this pre built but i hard coded this to show you I didnt disregard error handling
 }

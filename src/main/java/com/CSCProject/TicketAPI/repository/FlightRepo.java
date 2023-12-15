@@ -9,12 +9,16 @@ import java.util.List;
 
 @Repository
 public interface FlightRepo extends MongoRepository<Flight, String> {
+
+// find flight by destination
     @Query("{to:'?0'}")
     List<Flight> findByLocation(String to);
 
+    //find by seats availble
     @Query("{seats: '?0'}")
     List<Flight> findBySeats();
 
+    //find trip from its depart and destination spots
     @Query("{'from': ?0, 'to': ?1}")
     List<Flight> findTrip(String from, String to);
 

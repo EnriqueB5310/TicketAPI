@@ -1,24 +1,15 @@
 package com.CSCProject.TicketAPI.recieptModel;
-
-
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.aggregation.ArithmeticOperators;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Random;
 
 
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+
 @Document("Receipts")
 public class FlightReceipt {
     @Id
-    private int id;
+    private int id; //randomly generated 6 digit number generated front-end side.
 
     private String customerName;
 
@@ -29,6 +20,16 @@ public class FlightReceipt {
     private String airport;
 
     private String destination;
+
+    public FlightReceipt(int id, String customerName, int seats, String time, String airport, String destination) {
+        super();
+        this.id = id;
+        this.customerName = customerName;
+        this.seats = seats;
+        this.time = time;
+        this.airport = airport;
+        this.destination = destination;
+    }
 
 }
 

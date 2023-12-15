@@ -18,7 +18,7 @@ public class RecieptImpl implements RecieptService {
 
     /**
      * @param id
-     * @return
+     * @return returns reciept and its info
      */
     @Override
     public Optional<FlightReceipt> getReciept(int id) {
@@ -26,7 +26,7 @@ public class RecieptImpl implements RecieptService {
     }
 
     /**
-     * @return
+     * @return creates reciept
      */
     @Override
     public FlightReceipt createReciept(FlightReceipt receipt) {

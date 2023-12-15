@@ -8,8 +8,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ReceiptRepo extends MongoRepository<FlightReceipt, Integer> {
-
-
-
+    //could add query to find all tickets ever bought under name/email, will do if time.
 
 }
